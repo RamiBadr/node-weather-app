@@ -1,0 +1,150 @@
+*:root {
+    --dark-grey: #333;
+    --light-grey: #888;
+    --space: 1rem;
+}
+
+body {
+ color: var(--dark-grey);
+ font-family: Arial;
+ max-width: 650px;
+ margin: 0 auto;
+ padding-left: var(--space);
+ display: flex;
+ flex-direction: column;
+ min-height: 100vh;
+}
+
+#preloader {
+    background: #fff;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#preloader img {
+    width: 500px;
+    /* height: 100px; */
+}
+
+.main-content {
+    flex-grow: 1;
+}
+
+header {
+    margin-top: var(--space);
+    margin-bottom: 48px;
+}
+
+header a {
+    color: var(--light-grey);
+    margin-right: 16px;
+    text-decoration: none;
+}
+
+.portrait {
+    width: 250px;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+form input, form .selectField, form .countriesList {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+.selector {
+    position: relative;
+}
+
+form .selectField {
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+form .selectField p {
+    font-size: 16px !important;
+}
+
+form .selectField img {
+    width: 20px;
+    height: 20px;
+    transition: all 0.3s;
+}
+
+form .selectField img.rotate {
+    transform: rotate(180deg);
+}
+
+form .countriesList {
+    list-style-type: none;
+    position: absolute;
+    height: 314px;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: 12px;
+    cursor: pointer;   
+}
+
+form .countriesList.hidden{
+    display: none;
+}
+
+.countriesList li {
+    padding: 5px 5px;
+    background-color: #fff;
+}
+
+form .countriesList li:hover {
+    background-color: var(--dark-grey);
+    color: #fff;
+}
+
+form .countryImg {
+    width: 20px;
+    margin-right: 10px;
+}
+
+button {
+    cursor: pointer;
+    border: 1px solid #888;
+    background: #888;
+    color: #fff;
+    padding: 8px;
+}
+
+#message-one.error {
+    color: red;
+}
+
+h1 {
+    font-size: 64px;
+    margin-bottom: var(--space);
+}
+
+footer {
+    color: var(--light-grey);
+    border: 1px solid #eee;
+    margin-top: var(--space);
+    padding: var(--space) 0;
+    align-self: baseline;
+}
+
+
+.me-img {
+    width: 250px;
+}
+
