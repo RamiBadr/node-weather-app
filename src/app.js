@@ -103,5 +103,5 @@ app.get('*', (req, res) => {
     })
 });
 
-app.listen(3001, () => console.log('server is up on port 3001.'));
+app.listen(3001);
 

@@ -5,7 +5,6 @@ const allCountries = (callback) => {
         if (error) {
             callback('unable to connect to countries service')
         } else {
-            console.log(typeof body)
             callback(undefined, body)
         }
     })
