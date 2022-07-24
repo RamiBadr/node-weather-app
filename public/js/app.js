@@ -26,7 +26,7 @@ form.addEventListener('submit', (e) => {
         return;
     }
 
-    fetch(`http://localhost:3001/weather?location=${inputSearch.value},${selectFieldText.textContent}`).then((res) => {
+    fetch(`/weather?location=${inputSearch.value},${selectFieldText.textContent}`).then((res) => {
         res.json().then(data => {
             if(data.error) {
                 messageOne.classList.add('error');
@@ -47,7 +47,7 @@ form.addEventListener('submit', (e) => {
 
 // gets a list of countries from backend
 const getCountriesList = async () => {
-    const res = await fetch('http://localhost:3001/countries');
+    const res = await fetch('/countries');
     const data = await res.json();
 
     // sort data in alphabitical order

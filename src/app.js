@@ -5,6 +5,9 @@ const forecast = require('./utils/forecast');
 const geocode = require('./utils/geocode');
 const allCountries = require('./utils/allCountries');
 
+// define a port for heroku
+const port = process.env.PORT || 3000;
+
 // define paths for express engine
 const publicDir = path.join(__dirname, '../public');
 const viewsPath = path.join(__dirname, '../templates/views');
@@ -103,5 +106,7 @@ app.get('*', (req, res) => {
     })
 });
 
-app.listen(3001);
+app.listen(port, () => {
+    console.log(`Server is up on port ${port}`);
+});
 
