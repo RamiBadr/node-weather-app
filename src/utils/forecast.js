@@ -9,10 +9,11 @@ const forecast = ({lat, lng}, callback) => {
                } else if(body.error) {
                 callback('please provide a valid location');
                } else {
-                const {temperature, weather_descriptions, feelslike, precip} = body.current;
+                const {temperature, weather_descriptions, feelslike, precip, humidity} = body.current;
                 callback(
                     undefined,
-                    `It's ${weather_descriptions[0]}, it's currently ${temperature} degrees out. there's a ${precip}% chance of rain .`
+                    `It's ${weather_descriptions[0]}, it's currently ${temperature} degrees out but it feels like ${feelslike} degrees.
+                     there's a ${precip}% chance of rain. the humidity is ${humidity}%.`
                 );
                }
     })
