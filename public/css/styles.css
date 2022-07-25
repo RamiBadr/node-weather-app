@@ -33,10 +33,6 @@ body {
     /* height: 100px; */
 }
 
-.main-content {
-    flex-grow: 1;
-}
-
 header {
     margin-top: var(--space);
     margin-bottom: 48px;
@@ -143,8 +139,15 @@ footer {
     align-self: baseline;
 }
 
+/* ==== about page ==== */
 
 .me-img {
     width: 250px;
 }
+
+.creatby {
+    font-weight: 600;
+}
+
+
 
