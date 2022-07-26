@@ -15,6 +15,10 @@ body {
  min-height: 100vh;
 }
 
+.main-content {
+    flex-grow: 1;
+}
+
 #preloader {
     background: #fff;
     position: fixed;
@@ -132,11 +136,10 @@ h1 {
 }
 
 footer {
-    color: var(--light-grey);
-    border: 1px solid #eee;
-    margin-top: var(--space);
-    padding: var(--space) 0;
-    align-self: baseline;
+    color: #888888;
+    border-top: 1px solid #888;
+    margin-top: 16px;
+    padding: 16px 0;
 }
 
 /* ==== about page ==== */
